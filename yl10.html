@@ -13,77 +13,107 @@
     
 </head>
 <body>
-    <!-- Sergei 13.11.25 Ctrl+Ä -->
-     <h1>ÕPILASTE REGISTREERUMINE</h1>
-<form>
+    <form>
 
     <!-- Isikuandmed -->
-    <div class="section-title">Isikuandmed</div>
+    <fieldset>
+        <legend>Isikuandmed</legend>
 
-    <label>Eesnimi
-        <input type="text" name="eesnimi" maxlength="30" placeholder="nt Mario" required>
-    </label>
+        <label>Eesnimi
+            <input type="text" name="eesnimi" placeholder="nt Mario" maxlength="30" required>
+        </label>
 
-    <label>Perenimi
-        <input type="text" name="perenimi" maxlength="30" placeholder="nt Metshein" required>
-    </label>
+        <label>Perenimi
+            <input type="text" name="perenimi" placeholder="nt Metshein" maxlength="30" required>
+        </label>
 
-    <label>Sünnikuupäev
-        <input type="date" name="synniaeg"
-               min="1950-01-01" max="2025-12-31"
-               value="1980-01-01" required>
-    </label>
+        <label>Sünnikuupäev
+            <input type="date" name="synniaeg" min="1950-01-01" max="2025-12-31" required>
+        </label>
 
-    <label>Sugu</label>
-    <input type="radio" name="sugu" value="naine"> Naine
-    <input type="radio" name="sugu" value="mees"> Mees
-    <input type="radio" name="sugu" value="muu"> Muu
+        <label>Sugu</label>
+        <label><input type="radio" name="sugu" value="naine"> Naine</label>
+        <label><input type="radio" name="sugu" value="mees"> Mees</label>
+        <label><input type="radio" name="sugu" value="muu"> Muu</label>
+    </fieldset>
 
     <!-- Kontakt -->
-    <button class="section-title">Kontakt</button>
+    <fieldset>
+        <legend>Kontakt</legend>
 
-    <label>E-post
-        <input type="email" name="email" maxlength="100" placeholder="nt nimi@kool.ee" required>
-    </label>
+        <label>E-post
+            <input type="email" name="email" placeholder="nt nimi@kool.ee" maxlength="100" required>
+        </label>
 
-    <label>Mobiiltelefon
-        <input type="tel" name="telefon" placeholder="+372 51234567"
-               pattern="^\+372\s?\d{7,8}$" required>
-    </label>
+        <label>Mobiiltelefon
+            <input type="tel" name="tel"
+                   placeholder="+372 51234567"
+                   pattern="^\+372\s?\d{7,8}$"
+                   required>
+        </label>
 
-    <label>Aadress
-        <textarea name="aadress" placeholder="Tänav, maja, korter"></textarea>
-    </label>
+        <label>Aadress
+            <textarea name="aadress" placeholder="Tänav, maja, korter"></textarea>
+        </label>
 
-    <label>Linn / asula
-        <input type="text" name="linn" maxlength="30" placeholder="nt Tallinn" required>
-    </label>
+        <label>Linn / asula
+            <input type="text" name="linn" placeholder="nt Tallinn" maxlength="30" required>
+        </label>
 
-    <label>Postiindeks
-        <input type="text" name="postiindeks" pattern="^\d{5}$" placeholder="nt 10111" required>
-    </label>
+        <label>Postiindeks
+            <input type="text" name="postiindeks" placeholder="nt 10111" pattern="^\d{5}$" required>
+        </label>
 
-    <label>Riik
-        <input type="text" name="riik" value="Eesti" readonly>
-    </label>
+        <label>Riik
+            <select name="riik">
+                <option value="Eesti">Eesti</option>
+            </select>
+        </label>
+    </fieldset>
 
     <!-- Muu info -->
-    <button class="section-title">Muu info</button>
+    <fieldset>
+        <legend>Muu info</legend>
 
-    <label>Huvialad:</label>
-    <input type="checkbox" name="huvi" value="joonistamine"> Joonistamine  
-    <input type="checkbox" name="huvi" value="laulmine"> Laulmine  
-    <input type="checkbox" name="huvi" value="tantsimine"> Tantsimine  
-    <input type="checkbox" name="huvi" value="muu"> Muu:
-    <input type="text" name="muu_huvi" maxlength="30" placeholder="täpsusta">
+        <label>Huvi­alad:</label><br>
+        <label><input type="checkbox" name="hobi_joonistamine"> Joonistamine</label>
+        <label><input type="checkbox" name="hobi_laulmine"> Laulmine</label>
+        <label><input type="checkbox" name="hobi_tantsimine"> Tantsimine</label>
 
-    <label>Isiklik veebileht
-        <input type="url" name="web" placeholder="https://minuleht.ee"
-               pattern="https?://.*">
-    </label>
+        <br><br>
 
-    <br><br>
+        <label>Muu:
+            <input type="text" name="muu" placeholder="täpsusta (kuni 30 märki)" maxlength="30">
+        </label>
+
+        <label>Isiklik veebileht
+            <input type="url" name="veeb" placeholder="https://minuleht.ee">
+        </label>
+
+        <label>Eelistatud teema­värv (valikuline)
+            <input type="color" name="teema">
+        </label>
+
+        <label>Dokumendid (PDF või pilt)
+            <input type="file" name="fail" accept=".pdf,image/*">
+        </label>
+    </fieldset>
+
+    <!-- Nõustumine -->
+    <fieldset>
+        <legend>Nõustumine</legend>
+        <label>
+            <input type="checkbox" name="noustun" required>
+            Kinnitan, et esitatud andmed on õiged ja luban nende töötlemist vastavalt kooli tingimustele.
+        </label>
+    </fieldset>
+
     <button type="submit">Saada</button>
+    <button type="reset">Tühjenda</button>
+
+
+
+
 
 </form>
 
