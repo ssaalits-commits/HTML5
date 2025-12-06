@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sergei Säälits">
+    <meta name="description" content="Õppematerjal HTML päisest: Õpime HTML5">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <title>Ülesanne 02 &pitchfork;</title>
+    
+</head>
+<body>
+    <!-- Sergei 13.11.25 Ctrl+Ä -->
+     <h1>ÕPILASTE REGISTREERUMINE</h1>
+<form>
+
+    <!-- Isikuandmed -->
+    <div class="section-title">Isikuandmed</div>
+
+    <label>Eesnimi
+        <input type="text" name="eesnimi" maxlength="30" placeholder="nt Mario" required>
+    </label>
+
+    <label>Perenimi
+        <input type="text" name="perenimi" maxlength="30" placeholder="nt Metshein" required>
+    </label>
+
+    <label>Sünnikuupäev
+        <input type="date" name="synniaeg"
+               min="1950-01-01" max="2025-12-31"
+               value="1980-01-01" required>
+    </label>
+
+    <label>Sugu</label>
+    <input type="radio" name="sugu" value="naine"> Naine
+    <input type="radio" name="sugu" value="mees"> Mees
+    <input type="radio" name="sugu" value="muu"> Muu
+
+    <!-- Kontakt -->
+    <button class="section-title">Kontakt</button>
+
+    <label>E-post
+        <input type="email" name="email" maxlength="100" placeholder="nt nimi@kool.ee" required>
+    </label>
+
+    <label>Mobiiltelefon
+        <input type="tel" name="telefon" placeholder="+372 51234567"
+               pattern="^\+372\s?\d{7,8}$" required>
+    </label>
+
+    <label>Aadress
+        <textarea name="aadress" placeholder="Tänav, maja, korter"></textarea>
+    </label>
+
+    <label>Linn / asula
+        <input type="text" name="linn" maxlength="30" placeholder="nt Tallinn" required>
+    </label>
+
+    <label>Postiindeks
+        <input type="text" name="postiindeks" pattern="^\d{5}$" placeholder="nt 10111" required>
+    </label>
+
+    <label>Riik
+        <input type="text" name="riik" value="Eesti" readonly>
+    </label>
+
+    <!-- Muu info -->
+    <button class="section-title">Muu info</button>
+
+    <label>Huvialad:</label>
+    <input type="checkbox" name="huvi" value="joonistamine"> Joonistamine  
+    <input type="checkbox" name="huvi" value="laulmine"> Laulmine  
+    <input type="checkbox" name="huvi" value="tantsimine"> Tantsimine  
+    <input type="checkbox" name="huvi" value="muu"> Muu:
+    <input type="text" name="muu_huvi" maxlength="30" placeholder="täpsusta">
+
+    <label>Isiklik veebileht
+        <input type="url" name="web" placeholder="https://minuleht.ee"
+               pattern="https?://.*">
+    </label>
+
+    <br><br>
+    <button type="submit">Saada</button>
+
+</form>
+
+</body>
+</html>
